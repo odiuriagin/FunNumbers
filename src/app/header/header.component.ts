@@ -9,14 +9,13 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  dateFact: Object;
+  dateFact: string;
 
   constructor(private numbers: NumbersService) { }
 
   ngOnInit() {
-    this.numbers.getDateFact().subscribe(
-      fact => this.dateFact = fact
-    )
+    this.numbers.getDateFact().subscribe( fact => {
+        this.dateFact = fact.text
+    })
   }
-
 }

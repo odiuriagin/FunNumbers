@@ -15,8 +15,8 @@ export class NumbersService {
     return this.http.get(`http://numbersapi.com/${month}/${date}/date?json`);
   }
 
-  getNumberFact() {
-
+  getNumberFact(num) {
+    return this.http.get(`http://numbersapi.com/${num}?json`);
   }
 
 }

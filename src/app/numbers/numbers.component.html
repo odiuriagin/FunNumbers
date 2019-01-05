@@ -1,0 +1,11 @@
+<p>Enter a number to get an interesting fact about!</p>
+<form>
+  <label>Number:
+    <input type="number" name="number" [(ngModel)]="number">
+  </label>
+  <button (click)="addNumber()">Add</button>
+</form>
+
+<div>
+  <p *ngFor="let fact of numberFacts">{{ fact }}</p>
+</div>
