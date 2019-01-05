@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 80px;
+    background-color: #2a61ba;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+header p {
+    padding: 10px 0;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+}
+
+.date-fact-label {
+    font-weight: 700;
+}
