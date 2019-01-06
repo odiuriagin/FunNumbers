@@ -9,20 +9,28 @@ import { NumbersService } from '../numbers.service';
 })
 export class NumbersComponent implements OnInit {
 
-  number: number;
+  allNumbers: Number[];
+  id: number;
   numberFacts: Array<string>;
 
   constructor(private numbers: NumbersService) { }
 
   ngOnInit() {
-    this.numberFacts = [];
+    this.allNumbers = [];
+    this.id = 0;
   }
 
   addNumber() {
     this.numbers.getNumberFact(this.number).subscribe( fact => {
-      this.numberFacts = this.numberFacts.concat(fact.text)
-      console.log(this.numberFacts[0]);
+      fact["deleted"] = false;
+      fact["id"] = this.id;
+      this.allNumbers.push(fact)
+      this.id++;
   })
+  }
+
+  removeNumber() {
+  
   }
 
 }
