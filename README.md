@@ -1,6 +1,6 @@
 # FunNumbers
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+FunNumbers is a single page CRUD application built with Angular. It uses Numbers API and fetches interesting facts about numbers and dates.
 
 ## How to run the app
 
