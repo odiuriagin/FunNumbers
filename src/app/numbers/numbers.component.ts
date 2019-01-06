@@ -11,6 +11,8 @@ export class NumbersComponent implements OnInit {
 
   allNumbers: Number[];
   id: number;
+  receivedObj: any;
+  number: any;
 
   constructor(private numbers: NumbersService) { }
 
@@ -21,10 +23,11 @@ export class NumbersComponent implements OnInit {
 
   addNumber() {
     this.numbers.getNumberFact(this.number).subscribe( fact => {
-      fact["deleted"] = false;
-      fact["edit"] = false;
-      fact["id"] = this.id;
-      this.allNumbers.push(fact)
+      this.receivedObj = fact;
+      this.receivedObj["deleted"] = false;
+      this.receivedObj["edit"] = false;
+      this.receivedObj["id"] = this.id;
+      this.allNumbers.push(this.receivedObj)
       this.id++;
       this.number = "";
     })

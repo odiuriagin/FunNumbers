@@ -10,12 +10,14 @@ import { Observable } from 'rxjs';
 export class HeaderComponent implements OnInit {
 
   dateFact: string;
+  receivedObj: any;
 
   constructor(private numbers: NumbersService) { }
 
   ngOnInit() {
     this.numbers.getDateFact().subscribe( fact => {
-        this.dateFact = fact.text
+      this.receivedObj = fact;
+      this.dateFact = this.receivedObj.text;
     })
   }
 }

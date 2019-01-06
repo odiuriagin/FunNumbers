@@ -10,6 +10,7 @@ import { NumbersService } from '../numbers.service';
 export class DisplayNumberComponent implements OnInit {
 
   @Input() number: Number;
+  receivedObj: any;
 
   constructor(private numbers: NumbersService) { }
 
@@ -26,7 +27,8 @@ export class DisplayNumberComponent implements OnInit {
 
   saveEditedNumber(num) {
   this.numbers.getNumberFact(num).subscribe( fact => {
-    this.number.text = fact.text;
+    this.receivedObj = fact;
+    this.number.text = this.receivedObj.text;
   })
     this.number.edit = false;
   }

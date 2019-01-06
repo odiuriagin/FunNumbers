@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## How to run the app
 
-1. Clone this repository by running `clone https://github.com/odiuriagin/FunNumbers.git` in your terminal.
+1. Clone this repository by running `git clone https://github.com/odiuriagin/FunNumbers.git` in your terminal.
 2. Run `npm install`
 3. run `ng serve -o` to start the server. Browser window will open automatically.
 
