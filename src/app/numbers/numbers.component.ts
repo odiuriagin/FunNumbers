@@ -23,14 +23,11 @@ export class NumbersComponent implements OnInit {
   addNumber() {
     this.numbers.getNumberFact(this.number).subscribe( fact => {
       fact["deleted"] = false;
+      fact["edit"] = false;
       fact["id"] = this.id;
       this.allNumbers.push(fact)
       this.id++;
-  })
-  }
-
-  removeNumber() {
-  
+    })
   }
 
 }

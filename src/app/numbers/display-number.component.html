@@ -1,4 +1,12 @@
 <div class="number">
   <p>{{ number.text }}</p>
   <button (click)="deleteNumber()">DELETE</button>
+  <button (click)="editNumber()">EDIT</button>
+  <div *ngIf="number.edit">
+    <form>
+      <p>Enter a new number:</p>
+      <input type="number" #newNum>
+      <button (click)="saveEditedNumber(newNum.value)">SAVE</button>
+    </form>
+  </div>
 </div>
