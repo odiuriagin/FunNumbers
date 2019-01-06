@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NumbersComponent } from './numbers/numbers.component';
+import { DisplayNumberComponent } from './numbers/display-number.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HeaderComponent,
-    NumbersComponent
+    NumbersComponent,
+    DisplayNumberComponent
   ],
   imports: [
     BrowserModule,

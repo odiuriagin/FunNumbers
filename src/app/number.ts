@@ -1,4 +1,7 @@
 export class Number {
     number: number;
-    description: string;
+    id: number;
+    numberFact: string;
+    deleted: boolean;
+    edit: boolean;
 }

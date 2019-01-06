@@ -11,7 +11,7 @@ export class NumbersService {
   getDateFact() {
     const today = new Date();
     const month = today.getMonth() + 1;
-    const date = today.getDay();
+    const date = today.getDate();
     return this.http.get(`http://numbersapi.com/${month}/${date}/date?json`);
   }
 

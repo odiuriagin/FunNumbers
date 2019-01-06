@@ -11,7 +11,6 @@ export class NumbersComponent implements OnInit {
 
   allNumbers: Number[];
   id: number;
-  numberFacts: Array<string>;
 
   constructor(private numbers: NumbersService) { }
 
@@ -27,6 +26,7 @@ export class NumbersComponent implements OnInit {
       fact["id"] = this.id;
       this.allNumbers.push(fact)
       this.id++;
+      this.number = "";
     })
   }
 
